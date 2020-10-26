@@ -1,3 +1,4 @@
+import { ProductFormComponent } from './Admin/product-form/product-form.component';
 import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
 import { AdminProductsComponent } from './Admin/admin-products/admin-products.component';
 import { LoginComponent } from './login/login.component';
@@ -41,6 +42,11 @@ const routes: Routes = [
   {
     path: 'admin/products',
     component: AdminProductsComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'admin/products/new',
+    component: ProductFormComponent,
     canActivate: [AuthGuardService],
   },
   {

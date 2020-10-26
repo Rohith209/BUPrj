@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { AuthService } from './auth.service';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,7 @@ import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.componen
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthGuardService } from './auth-guard.service';
+import { ProductFormComponent } from './Admin/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { AuthGuardService } from './auth-guard.service';
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { AuthGuardService } from './auth-guard.service';
     AngularFireAuthModule,
     NgbModule,
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
