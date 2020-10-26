@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BUPrj"
+    }
+  },
+  "defaultProject": "BUPrj",
+  "cli": {
+    "analytics": "bdc85b59-5740-4aa8-8060-f07d945855f8"
+  }
 }

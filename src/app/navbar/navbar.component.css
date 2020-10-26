@@ -1,0 +1,13 @@
+.searchbar {
+  margin-left: -30%;
+  padding-right: 150px;
+}
+button {
+  border-radius: 20%;
+  margin-left: -18%;
+  background-color: green;
+  color: white;
+}
+.logout {
+  cursor: pointer;
+}

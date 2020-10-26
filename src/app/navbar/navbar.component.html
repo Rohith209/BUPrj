@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Cool Hand Tix</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/shopping-cart">Cart</a>
+      </li>
+      <ng-template #anonymousUser>
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link">Login</a>
+        </li>
+      </ng-template>
+
+      <li
+        ngbDropdown
+        *ngIf="auth.user$ | async as user; else anonymousUser"
+        class="nav-item dropdown"
+      >
+        <a
+          class="nav-link dropdown-toggle"
+          ngbDropdownToggle
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {{ user.displayName }}
+        </a>
+        <div
+          ngbDropdownMenu
+          *ngIf="user"
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdown"
+        >
+          <a class="dropdown-item" routerLink="/my-orders">My Orders</a>
+          <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+          <a class="dropdown-item" routerLink="/admin/products"
+            >Manage Products</a
+          >
+          <a class="dropdown-item logout" (click)="logout()">Log Out</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline">
+      <input
+        class="form-control searchbar"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <a> <i class="fas fa-search"></i> </a>
+    </form>
+  </div>
+</nav>
