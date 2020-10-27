@@ -1,3 +1,5 @@
+import { ProductService } from './product.service';
+import { CategoryService } from './category.service';
 import { AdminAuthGuardService } from './admin-auth-guard.service';
 import { UserService } from './user.service';
 import { AuthService } from './auth.service';
@@ -25,6 +27,7 @@ import { AuthGuardService } from './auth-guard.service';
 import { ProductFormComponent } from './Admin/product-form/product-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { MapsComponent } from './maps/maps.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,12 +53,16 @@ import { MapsComponent } from './maps/maps.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,
     AuthGuardService,
     UserService,
     AdminAuthGuardService,
+    CategoryService,
+    ProductService
   ],
   bootstrap: [AppComponent],
 })
