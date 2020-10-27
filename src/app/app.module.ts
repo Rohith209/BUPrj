@@ -1,3 +1,4 @@
+import { AdminAuthGuardService } from './admin-auth-guard.service';
 import { UserService } from './user.service';
 import { AuthService } from './auth.service';
 import { environment } from './../environments/environment';
@@ -50,7 +51,12 @@ import { MapsComponent } from './maps/maps.component';
     AngularFireAuthModule,
     NgbModule,
   ],
-  providers: [AuthService, AuthGuardService, UserService],
+  providers: [
+    AuthService,
+    AuthGuardService,
+    UserService,
+    AdminAuthGuardService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
