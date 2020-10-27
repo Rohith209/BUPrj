@@ -22,6 +22,8 @@ import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthGuardService } from './auth-guard.service';
 import { ProductFormComponent } from './Admin/product-form/product-form.component';
+import { FooterComponent } from './footer/footer.component';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ProductFormComponent } from './Admin/product-form/product-form.componen
     AdminOrdersComponent,
     LoginComponent,
     ProductFormComponent,
+    FooterComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,
