@@ -11,3 +11,8 @@ button {
 .logout {
   cursor: pointer;
 }
+
+.fa-search {
+  color: white;
+  font-size: x-large;
+}
