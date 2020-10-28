@@ -4,17 +4,19 @@
   >
 </p>
 <table class="table">
-  <thead class="tr">
-    <th>Title</th>
-    <th>Price</th>
-    <th></th>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Edit</th>
+    </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let p of products$ | async">
-      <td>{{ p.title }}</td>
-      <td>{{ p.price }}</td>
+    <tr *ngFor="let products of products$ | async">
+      <td>{{ products.title }}</td>
+      <td>{{ products.price }}</td>
       <td>
-        <a [routerLink]="['/admin/products', p.$key]">Edit </a>
+        <a [routerLink]="['/admin/products/', products.$key]">Edit </a>
       </td>
     </tr>
   </tbody>

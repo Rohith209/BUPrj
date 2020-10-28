@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "buproject-3a257"
+  },
+  "targets": {
+    "buproject-3a257": {
+      "hosting": {
+        "BUPrj": [
+          "buproject-3a257"
+        ]
+      }
+    }
   }
 }

@@ -29,7 +29,7 @@ const routes: Routes = [
   {
     path: 'my-orders',
     component: MyOrdersComponent,
-    canActivate: [AuthGuardService],
+    //canActivate: [AuthGuardService],
   },
   {
     path: 'order-success',
@@ -43,17 +43,17 @@ const routes: Routes = [
   {
     path: 'admin/products',
     component: AdminProductsComponent,
-    canActivate: [AuthGuardService, AdminAuthGuardService],
+    //canActivate: [AuthGuardService, AdminAuthGuardService],
   },
   {
     path: 'admin/products/new',
     component: ProductFormComponent,
-    canActivate: [AuthGuardService, AdminAuthGuardService],
+    canActivate: [AuthGuardService],
   },
   {
     path: 'admin/orders',
     component: AdminOrdersComponent,
-    canActivate: [AuthGuardService, AdminAuthGuardService],
+    //canActivate: [AuthGuardService, AdminAuthGuardService],
   },
 ];
 
