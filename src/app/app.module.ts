@@ -28,6 +28,7 @@ import { ProductFormComponent } from './Admin/product-form/product-form.componen
 import { FooterComponent } from './footer/footer.component';
 import { MapsComponent } from './maps/maps.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductFormComponent,
     FooterComponent,
     MapsComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
